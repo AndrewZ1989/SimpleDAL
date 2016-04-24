@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B361B15-DE89-4577-A565-38583B57BBA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleDAL.UnitOfWork.Linq2Sql</RootNamespace>
+    <AssemblyName>SimpleDAL.UnitOfWork.Linq2Sql</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext\IDataContext.cs" />
+    <Compile Include="DataContext\ILinqSession.cs" />
+    <Compile Include="DataContext\LinqUnitOfWorkDataContext.cs" />
+    <Compile Include="Delegates\GetMapperDelegate.cs" />
+    <Compile Include="LinqToSqlMapper.cs" />
+    <Compile Include="LinqToSqlTransaction.cs" />
+    <Compile Include="LinqToSqlUnitOfWork.cs" />
+    <Compile Include="LinqToSqlUnitOfWorkFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\LinqToSqlRepository.cs" />
+    <Compile Include="Repository\LinqToSqlRepositoryReadonly.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleDAL.UnitOfWork1\SimpleDAL.UnitOfWork.csproj">
+      <Project>{6556e6a0-b4ef-4236-89ed-b1b98fa0918e}</Project>
+      <Name>SimpleDAL.UnitOfWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleDAL.Utility\SimpleDAL.Utility.csproj">
+      <Project>{103c4d86-d708-4e44-9e0c-ea40760a5ac0}</Project>
+      <Name>SimpleDAL.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
