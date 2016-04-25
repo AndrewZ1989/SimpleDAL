@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{698DDEB7-D606-443B-B89E-0C5716E02004}</ProjectGuid>
+    <ProjectGuid>{5245AA56-51E8-48BE-88BB-F40CF02AFC91}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SImpleDAL.Repository.Linq2Sql</RootNamespace>
-    <AssemblyName>SImpleDAL.Repository.Linq2Sql</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>SimpleDAL.Repository.EntityFramework4</RootNamespace>
+    <AssemblyName>SimpleDAL.Repository.EntityFramework4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,18 +30,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseLTSqlQObjRepository.cs" />
-    <Compile Include="BaseLTSqlQObjRepositoryReadonly.cs" />
-    <Compile Include="BaseLTSqlRepository.cs" />
+    <Compile Include="BaseEFQObjRepository.cs" />
+    <Compile Include="BaseEFQObjRepositoryReadonly.cs" />
+    <Compile Include="BaseEFRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,9 +59,13 @@
       <Project>{7b4fedb6-9645-4769-938c-c3f026af8cea}</Project>
       <Name>SImpleDAL.Repository.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SimpleDAL.UnitOfWork.Linq2Sql\SimpleDAL.UnitOfWork.Linq2Sql.csproj">
-      <Project>{1b361b15-de89-4577-a565-38583b57bba2}</Project>
-      <Name>SimpleDAL.UnitOfWork.Linq2Sql</Name>
+    <ProjectReference Include="..\SimpleDAL.UnitOfWork.EntityFramework.Common\SimpleDAL.UnitOfWork.EntityFramework.Common.csproj">
+      <Project>{d6b75467-e40d-455b-b73a-bc20e95273b0}</Project>
+      <Name>SimpleDAL.UnitOfWork.EntityFramework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleDAL.UnitOfWork.EntityFramework4\SimpleDAL.UnitOfWork.EntityFramework4.csproj">
+      <Project>{b417d2a9-71dc-4d01-96e7-0b08f8d16cdd}</Project>
+      <Name>SimpleDAL.UnitOfWork.EntityFramework4</Name>
     </ProjectReference>
     <ProjectReference Include="..\SimpleDAL.UnitOfWork\SimpleDAL.UnitOfWork.csproj">
       <Project>{6556e6a0-b4ef-4236-89ed-b1b98fa0918e}</Project>
@@ -61,6 +75,10 @@
       <Project>{103c4d86-d708-4e44-9e0c-ea40760a5ac0}</Project>
       <Name>SimpleDAL.Utility</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

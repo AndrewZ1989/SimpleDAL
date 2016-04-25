@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.UnitOfWork", "SimpleDAL.UnitOfWork1\SimpleDAL.UnitOfWork.csproj", "{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Utility", "SimpleDAL.Utility\SimpleDAL.Utility.csproj", "{103C4D86-D708-4E44-9E0C-EA40760A5AC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.UnitOfWork.Linq2Sql", "SimpleDAL.UnitOfWork.Linq2Sql\SimpleDAL.UnitOfWork.Linq2Sql.csproj", "{1B361B15-DE89-4577-A565-38583B57BBA2}"
@@ -21,16 +19,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SImpleDAL.Repository.Linq2S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Repository.EntityFramework", "SimpleDAL.Repository.EntityFramework\SimpleDAL.Repository.EntityFramework.csproj", "{7C50D805-0207-4E7E-A500-689A15B88390}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.UnitOfWork", "SimpleDAL.UnitOfWork\SimpleDAL.UnitOfWork.csproj", "{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDAL.Repository.EntityFramework4", "SimpleDAL.Repository.EntityFramework4\SimpleDAL.Repository.EntityFramework4.csproj", "{5245AA56-51E8-48BE-88BB-F40CF02AFC91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{103C4D86-D708-4E44-9E0C-EA40760A5AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{103C4D86-D708-4E44-9E0C-EA40760A5AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{103C4D86-D708-4E44-9E0C-EA40760A5AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +61,14 @@ Global
 		{7C50D805-0207-4E7E-A500-689A15B88390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C50D805-0207-4E7E-A500-689A15B88390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C50D805-0207-4E7E-A500-689A15B88390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6556E6A0-B4EF-4236-89ED-B1B98FA0918E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5245AA56-51E8-48BE-88BB-F40CF02AFC91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5245AA56-51E8-48BE-88BB-F40CF02AFC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5245AA56-51E8-48BE-88BB-F40CF02AFC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5245AA56-51E8-48BE-88BB-F40CF02AFC91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

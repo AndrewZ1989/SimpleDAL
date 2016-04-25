@@ -65,7 +65,7 @@
       <Project>{d6b75467-e40d-455b-b73a-bc20e95273b0}</Project>
       <Name>SimpleDAL.UnitOfWork.EntityFramework.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SimpleDAL.UnitOfWork1\SimpleDAL.UnitOfWork.csproj">
+    <ProjectReference Include="..\SimpleDAL.UnitOfWork\SimpleDAL.UnitOfWork.csproj">
       <Project>{6556e6a0-b4ef-4236-89ed-b1b98fa0918e}</Project>
       <Name>SimpleDAL.UnitOfWork</Name>
     </ProjectReference>
